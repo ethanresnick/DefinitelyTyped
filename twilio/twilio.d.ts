@@ -16,7 +16,7 @@ declare interface twilio {
   (sid?: string, tkn?: string, options?: twilio.ClientOptions): twilio.RestClient;
 }
 
-declare module twilio {
+declare namespace twilio {
 
   // Composite Classes:
   //==============================
@@ -871,6 +871,7 @@ declare module twilio {
     originationUrls: OriginationURLResource;
   }
   export interface TrunkResource extends ListMappedResource<TrunkInstance> {}
+
 }
 
 export = twilio;
