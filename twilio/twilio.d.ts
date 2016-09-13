@@ -4,7 +4,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 /// <reference types="express" />
-/// <reference types="http" />
+/// <reference types="node" />
 /// <reference types="q" />
 import Express = require("express");
 import Http = require("http");
