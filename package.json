@@ -1,34 +1,112 @@
 {
-  "private": true,
-  "name": "definitely-typed",
-  "version": "0.0.1",
-  "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped",
+  "_args": [
+    [
+      {
+        "raw": "@types/twilio@0.0.3",
+        "scope": "@types",
+        "escapedName": "@types%2ftwilio",
+        "name": "@types/twilio",
+        "rawSpec": "0.0.3",
+        "spec": "0.0.3",
+        "type": "version"
+      },
+      "/Users/ethanresnick/Other/Projects/GithubRepos/hotline"
+    ],
+    [
+      {
+        "raw": "@types/twilio@github:ethanresnick/DefinitelyTyped#working-twilio-installable",
+        "scope": "@types",
+        "escapedName": "@types%2ftwilio",
+        "name": "@types/twilio",
+        "rawSpec": "github:ethanresnick/DefinitelyTyped#working-twilio-installable",
+        "spec": "github:ethanresnick/DefinitelyTyped#working-twilio-installable",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:ethanresnick/DefinitelyTyped.git#working-twilio-installable",
+          "sshUrl": "git+ssh://git@github.com/ethanresnick/DefinitelyTyped.git#working-twilio-installable",
+          "httpsUrl": "git+https://github.com/ethanresnick/DefinitelyTyped.git#working-twilio-installable",
+          "gitUrl": "git://github.com/ethanresnick/DefinitelyTyped.git#working-twilio-installable",
+          "shortcut": "github:ethanresnick/DefinitelyTyped#working-twilio-installable",
+          "directUrl": "https://raw.githubusercontent.com/ethanresnick/DefinitelyTyped/working-twilio-installable/package.json"
+        }
+      },
+      "/Users/ethanresnick/Other/Projects/GithubRepos/hotline"
+    ]
+  ],
+  "_from": "ethanresnick/DefinitelyTyped#working-twilio-installable",
+  "_id": "@types/twilio@0.0.3",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/@types/twilio",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/twilio-0.0.3.tgz_1473700494206_0.9951093529816717"
+  },
+  "_npmUser": {
+    "name": "types",
+    "email": "ts-npm-types@microsoft.com"
+  },
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@types/twilio@github:ethanresnick/DefinitelyTyped#working-twilio-installable",
+    "scope": "@types",
+    "escapedName": "@types%2ftwilio",
+    "name": "@types/twilio",
+    "rawSpec": "github:ethanresnick/DefinitelyTyped#working-twilio-installable",
+    "spec": "github:ethanresnick/DefinitelyTyped#working-twilio-installable",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:ethanresnick/DefinitelyTyped.git#working-twilio-installable",
+      "sshUrl": "git+ssh://git@github.com/ethanresnick/DefinitelyTyped.git#working-twilio-installable",
+      "httpsUrl": "git+https://github.com/ethanresnick/DefinitelyTyped.git#working-twilio-installable",
+      "gitUrl": "git://github.com/ethanresnick/DefinitelyTyped.git#working-twilio-installable",
+      "shortcut": "github:ethanresnick/DefinitelyTyped#working-twilio-installable",
+      "directUrl": "https://raw.githubusercontent.com/ethanresnick/DefinitelyTyped/working-twilio-installable/package.json"
+    }
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "git://github.com/ethanresnick/DefinitelyTyped.git#67ad5d97ff99542a28d6a6ab80b372b5838a05f5",
+  "_shasum": "381002c31c649131186224bcecada8ca18c556a4",
+  "_shrinkwrap": null,
+  "_spec": "@types/twilio@github:ethanresnick/DefinitelyTyped#working-twilio-installable",
+  "_where": "/Users/ethanresnick/Other/Projects/GithubRepos/hotline",
+  "author": {
+    "name": "nickiannone",
+    "email": "https://github.com/nickiannone"
+  },
+  "dependencies": {
+    "@types/express": "*",
+    "@types/q": "*"
+  },
+  "description": "TypeScript definitions for twilio",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "52550e6a478e5ed83d77fd466f91d8b7e8974f2e",
+    "tarball": "https://registry.npmjs.org/@types/twilio/-/twilio-0.0.3.tgz"
+  },
+  "gitHead": "67ad5d97ff99542a28d6a6ab80b372b5838a05f5",
+  "license": "MIT",
+  "main": "",
+  "maintainers": [
+    {
+      "name": "types",
+      "email": "ts-npm-types@microsoft.com"
+    }
+  ],
+  "name": "@types/twilio",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DefinitelyTyped/DefinitelyTyped.git"
+    "url": "https://www.github.com/DefinitelyTyped/DefinitelyTyped.git"
   },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues"
-  },
-  "engines": {
-    "node": ">= 0.12.0"
-  },
-  "scripts": {
-    "test": "dt --all",
-    "changes": "dt --changes",
-    "lint": "dt --lint",
-    "tscparams": "dt --tscparams --no-tests --no-headers",
-    "all": "dt",
-    "dry": "dt --dry --changes",
-    "list": "dt --dry --print-files --print-refmap",
-    "last": "dt --dry --print-files --print-refmap --changes",
-    "files": "dt --dry --print-files",
-    "refmap": "dt --dry --print-refmap",
-    "help": "dt -h"
-  },
-  "devDependencies": {
-    "definition-tester": "next",
-    "typescript": "next"
-  }
+  "scripts": {},
+  "typesPublisherContentHash": "5f24450153bf52c822937bab84030bd6718f8366040e56b2c085a7f01c1d0210",
+  "typings": "twilio.d.ts",
+  "version": "0.0.3"
 }
