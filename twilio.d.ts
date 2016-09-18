@@ -377,9 +377,12 @@ declare namespace twilio {
     legalNodes: Array<string>;
   }
 
-  export interface TwimlMethod { (arg1: any | string | TwimlCallback, arg2?: any | string | TwimlCallback): Node }
+  export interface TwimlMethod {
+    (arg1: TwimlCallback | string, arg2?: any): Node
+    (arg1: any, arg2?: TwimlCallback | string): Node
+  }
 
-  export interface TwimlCallback { (node?: Node): void; }
+  export interface TwimlCallback { (node: Node): void; }
 
   export class Node implements NodeOptions {
     name: string;
