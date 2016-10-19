@@ -52,7 +52,10 @@ declare namespace twilio {
   export interface RequestCallback { (err: any, data: any, response: Http.ClientResponse): void; }
   export interface BaseRequestCallback { (err: any, data: any): void; }
 
-  export interface RestMethod { (args: any | BaseRequestCallback, callback?: RequestCallback): Q.Promise<any>; }
+  export interface RestMethod {
+    (callback: BaseRequestCallback | RequestCallback): Q.Promise<any>;
+    (args: any, callback?: RequestCallback): Q.Promise<any>;
+  }
 
   /// Resource stock interfaces
   export interface BaseMappedResource<T> {
@@ -427,7 +430,7 @@ declare namespace twilio {
   export class TwimlResponse extends Node {}
 
   /// webhook.js
-  export interface webhookOptions {
+  export interface WebhookOptions {
     validate?: boolean;
     includeHelpers?: boolean;
     host?: string;
@@ -448,8 +451,8 @@ declare namespace twilio {
   // For interop with node middleware chains
   export interface MiddlewareFunction { (request: Http.ServerRequest, response: Http.ServerResponse, next: Express.NextFunction): void; }
 
-  export function webhook(authToken: string, options?: webhookOptions): MiddlewareFunction;
-  export function webhook(options?: webhookOptions): MiddlewareFunction;
+  export function webhook(authToken: string, options?: WebhookOptions): MiddlewareFunction;
+  export function webhook(options?: WebhookOptions): MiddlewareFunction;
 
   export function validateRequest(authToken: string, twilioHeader: string, url: string, params?: any): boolean;
   export function validateExpressRequest(request: Express.Request, authToken: string, options?: WebhookExpressOptions): boolean;
@@ -579,7 +582,7 @@ declare namespace twilio {
     post: RestMethod;
     create: RestMethod;
   }
-  export interface CallResource extends CreatableMappedResource<CallInstance> {
+  export interface CallResource extends CreatableMappedResource<CallInstance>, ListableResource {
     feedbackSummary: CallFeedbackSummaryResource;
   }
 
@@ -874,7 +877,6 @@ declare namespace twilio {
     originationUrls: OriginationURLResource;
   }
   export interface TrunkResource extends ListMappedResource<TrunkInstance> {}
-
 }
 
 export = twilio;
